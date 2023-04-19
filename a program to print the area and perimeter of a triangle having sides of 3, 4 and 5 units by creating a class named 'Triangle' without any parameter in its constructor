@@ -1,27 +1,32 @@
-import java.util.Scanner;
-class area{
-    int length;
-    int breadth;
-    area(int a, int b)
-    {
-         length = a;
-         breadth = b;
-    }
-    public int areareturn()
-    {
-        return length * breadth;
-    }
+import static java.lang.Math.sqrt;
+class Triangle
+{
+ int a,b,c;
+public double getArea()
+{
+    double p=(a+b+c)/2.0;
+    return Math.sqrt(p*(p-a)*(p-b)*(p-c))
 }
-public class Rectangle4 {
-    public static void main(String[] args) {
-        Scanner obj = new Scanner(System.in);
-        int a,b;
-        System.out.println("Enter the lenght of Recatangle");
-         a = obj.nextInt();
-        obj.nextLine();
-        System.out.println("Enter the breadth of Recatangle");
-        b = obj.nextInt();
-        area ob1 = new area(a,b);
-        System.out.println("Area = "+ ob1.areareturn());
-    }
+public double getPerimeter()
+{
+ return (a+b+c)/2.0;
+
+}
+}
+class Perimeter
+{
+public static void main(String args[])
+{
+ Triangle t=new Triangle();
+
+ t.a=3;
+
+ t.b=4;
+
+ t.c=5;
+
+ System.out.println("Area of Triangle is: " +t.getArea());
+
+ System.out.println("Perimeter of Triangle is: " +t.getPerimeter());
+}
 }
